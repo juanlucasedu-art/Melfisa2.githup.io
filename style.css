@@ -1,0 +1,360 @@
+/* --- CONFIGURACIÓN DE ELEGANCIA --- */
+:root {
+    --azul-oscuro: #1a4a7a;
+    --rojo-melfisa: #ff4d4d;
+    --blanco-puro: #ffffff;
+    --sombra: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding-top: 80px;
+    color: #333;
+    line-height: 1.6;
+    /* FONDO VISIBLE Y FIJO */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('img/FONDO.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- HEADER TRANSPARENTE AL ESTILO MODERNO --- */
+header {
+  background-color: rgba(26, 74, 122, 0.95); /* Azul profesional con transparencia */
+    backdrop-filter: blur(10px); /* Efecto cristalino elegante */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.centro-nombre {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+/* ESTO HACE QUE EL MENÚ SEA HORIZONTAL */
+.nav-links {
+    display: flex;       /* Alinea los hijos (li) en fila */
+    list-style: none;    /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    gap: 25px;           /* Espacio horizontal entre cada opción */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    padding: 10px 5px;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d; /* Cambio a rojo al pasar el mouse */
+    border-bottom: 2px solid #ff4d4d; /* Línea decorativa inferior */
+}
+
+.nav-links a.active {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* --- CONTENEDORES FLOTANTES --- */
+.seccion-contenedor {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1100px;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+h1, h2 { color: var(--azul-oscuro); margin-bottom: 20px; }
+
+/* --- TARJETAS DE CATEGORÍAS --- */
+.grid-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.categoria-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.categoria-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* IMÁGENES AJUSTADAS */
+.categoria-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer; /* Indica que se puede ampliar */
+    transition: 0.3s;
+}
+
+.categoria-card img:hover {
+    opacity: 0.9;
+}
+
+/* --- BOTONES --- */
+.btn-moderno {
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    border: none;
+}
+
+.btn-azul { background: var(--azul-oscuro); color: white; }
+.btn-rojo { background: var(--rojo-melfisa); color: white; }
+
+/* --- VISOR DE ZOOM (MODERNO) --- */
+.visor {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#imagen-expandida {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* --- AJUSTE ESPECÍFICO PARA LA FOTO DE NOSOTROS --- */
+
+.contenedor-foto-nosotros {
+    display: flex;
+    justify-content: center; /* Centra la foto horizontalmente */
+    margin: 25px 0;         /* Separa la foto del título y del texto */
+}
+
+.foto-ajustada {
+    width: 65%;             /* Controla el ancho (puedes bajarlo a 50% si la quieres más pequeña) */
+    max-width: 700px;       /* Límite máximo para que no se vea gigante en PC */
+    height: 400px;          /* Altura fija para que se vea estilizada */
+    object-fit: cover;      /* IMPORTANTE: Ajusta la imagen sin estirarla ni deformarla */
+    border-radius: 20px;    /* Bordes redondeados elegantes */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra profesional */
+    border: 4px solid #ffffff; /* Marco blanco tipo fotografía */
+}
+/* --- DISEÑO DE CONTACTO MODERNO --- */
+
+.contacto-wrapper {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    align-items: center;
+    flex-wrap: wrap; /* Para que en móviles se ponga uno debajo de otro */
+}
+
+.contacto-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto-info h2 {
+    font-size: 2.5rem;
+    color: #1a4a7a;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: rgba(26, 74, 122, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+/* Tarjeta del Formulario */
+.contacto-form-card {
+    flex: 1;
+    min-width: 350px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
+    border-color: #1a4a7a;
+    outline: none;
+    background: #f9fbff;
+}
+
+.contacto-form-card .btn-moderno {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* --- ESTILOS PARA LA SECCIÓN SEMANA CIENTÍFICA --- */
+
+/* Ajuste de la Imagen */
+.contenedor-foto-semana {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.foto-semana-ajustada {
+    width: 85%;
+    max-width: 850px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.foto-semana-ajustada:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo de la Tabla Profesional */
+.cronograma-contenedor {
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.subtitulo-tabla {
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.tabla-semana {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-semana thead {
+    background-color: #1a4a7a;
+    color: white;
+}
+
+.tabla-semana th, 
+.tabla-semana td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-semana td strong {
+    color: #ff4d4d; /* Días en rojo */
+}
+
+.tabla-semana tr:hover {
+    background-color: #f9fbff;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .tabla-semana {
+        font-size: 0.8rem;
+    }
+    .foto-semana-ajustada {
+        height: 250px;
+    }
+}

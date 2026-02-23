@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - MELFISA II</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/logo.png" class="logo-img">
+                <span class="centro-nombre">MELFISA II</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="niveles.html">Niveles</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main class="seccion-contenedor">
+    <div class="contacto-wrapper">
+        
+        <div class="contacto-info">
+            <h2>Ponte en Contacto</h2>
+            <p>Estamos aquí para resolver tus dudas y darte la bienvenida a nuestra comunidad educativa.</p>
+            
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <p>Nkuantoma, LT. (Bata), Guinea Ecuatorial</p>
+            </div>
+            <div class="info-item">
+                <span class="icon">📞</span>
+                <p>+240 555 382 431</p>
+            </div>
+            <div class="info-item">
+                <span class="icon">✉️</span>
+                <p>info@melfisa2.com</p>
+            </div>
+        </div>
+
+        <div class="contacto-form-card">
+            <form action="https://formspree.io/f/mgolypoz" method="POST">
+                <div class="grupo-input">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Ej: Juan Nguema" required>
+                </div>
+                
+                <div class="grupo-input">
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-moderno btn-azul">Enviar Mensaje</button>
+            </form>
+        </div>
+        
+    </div>
+</main>
+</body>
+</html>
