@@ -91,6 +91,30 @@ header {
     color: #ff4d4d; /* Cambio a rojo al pasar el mouse */
     border-bottom: 2px solid #ff4d4d; /* Línea decorativa inferior */
 }
+/* AJUSTE GLOBAL PARA MÓVILES */
+@media (max-width: 768px) {
+    /* Ajusta el contenedor principal de todas las páginas */
+    .seccion-contenedor {
+        padding: 70px 15px 30px 15px !important;
+        width: 100% !important;
+    }
+
+    /* Ajusta las imágenes para que no se salgan */
+    img, .nosotros-img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Asegura que el menú siempre quepa */
+    .nav-links {
+        gap: 5px !important;
+    }
+    
+    .nav-links a {
+        font-size: 10px !important;
+    }
+}
+
 /* AJUSTE FINAL PARA QUE QUEPA CONTACTO */
 @media (max-width: 768px) {
     .nav-links {
