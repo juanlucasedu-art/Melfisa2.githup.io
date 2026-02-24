@@ -16,7 +16,7 @@ body {
     background-size: cover !important;
     background-position: center center;
     background-attachment: fixed !important; /* Mantiene el fondo quieto al hacer scroll */
-    background-color: white;
+
     margin: 0;
     padding: 0;
 }
