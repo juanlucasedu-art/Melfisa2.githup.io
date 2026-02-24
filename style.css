@@ -397,4 +397,34 @@ img {
     width: 80%; /* Los hace más anchos para que sean fáciles de pulsar */
     text-align: center;
 }
+/* --- AJUSTES PARA MÓVILES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Pone las tarjetas en una sola columna */
+    .grid-categorias {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* Ajusta el tamaño de las tarjetas */
+    .categoria-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    /* Ajusta los botones del inicio */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Reduce el tamaño del título para que no ocupe toda la pantalla */
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
 
