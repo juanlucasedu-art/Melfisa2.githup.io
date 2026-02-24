@@ -34,5 +34,19 @@
     <footer class="footer-oscuro">
         <p>COLEGIO PRIVADO MELFISA II - 2026</p>
     </footer>
+<div id="miModal" class="modal-imagen" onclick="this.style.display='none'">
+    <img id="imgAmpliada">
+</div>
+
+<script>
+    // Selecciona todas las imágenes dentro de las secciones
+    document.querySelectorAll('.seccion-contenedor img, .categoria-card img').forEach(imagen => {
+        imagen.onclick = function() {
+            document.getElementById("miModal").style.display = "flex";
+            document.getElementById("imgAmpliada").src = this.src;
+        }
+    });
+</script>
+
 </body>
 </html>
