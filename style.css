@@ -11,12 +11,14 @@
 body {
   /* Estilo del Fondo de Página */
 body {
+    /* Estilo del Fondo de Página */
+body {
     background-image: url('img/FONDO.jpg'); /* Asegúrate de que el nombre sea exacto */
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center center;
     background-attachment: fixed !important; /* Mantiene el fondo quieto al hacer scroll */
-
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -27,7 +29,6 @@ body {
         background-attachment: scroll !important; /* Mejora el rendimiento en celulares */
     }
 }
-
 
 /* --- HEADER TRANSPARENTE AL ESTILO MODERNO --- */
 header {
