@@ -68,11 +68,19 @@
         <p>📍 Nkuantoma, LT | 📞 +240 000 000 | 📧 info@melfisa2.com</p>
     </footer>
 
-    <div id="visor-imagen" class="visor">
-        <span class="cerrar">&times;</span>
-        <img id="imagen-expandida">
-    </div>
+    <div id="miModal" class="modal-imagen" onclick="this.style.display='none'">
+    <img id="imgAmpliada">
+</div>
 
-    <script src="script.js"></script>
+<script>
+    // Selecciona todas las imágenes dentro de las secciones
+    document.querySelectorAll('.seccion-contenedor img, .categoria-card img').forEach(imagen => {
+        imagen.onclick = function() {
+            document.getElementById("miModal").style.display = "flex";
+            document.getElementById("imgAmpliada").src = this.src;
+        }
+    });
+</script>
+
 </body>
 </html>
