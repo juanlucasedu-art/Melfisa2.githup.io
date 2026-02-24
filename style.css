@@ -370,4 +370,17 @@ img {
     padding: 20px;
     margin: 0 auto;
 }
+/* Esto separa los botones en pantallas pequeñas */
+.frase-bienvenida + div, 
+.hero-buttons { 
+    display: flex;
+    flex-direction: column; /* Pone uno debajo del otro */
+    gap: 15px;
+    align-items: center;
+}
+
+.boton-primario, .boton-secundario {
+    width: 80%; /* Los hace más anchos para que sean fáciles de pulsar */
+    text-align: center;
+}
 
