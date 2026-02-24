@@ -91,18 +91,19 @@ header {
     color: #ff4d4d; /* Cambio a rojo al pasar el mouse */
     border-bottom: 2px solid #ff4d4d; /* Línea decorativa inferior */
 }
-/* --- ESTO ARREGLA EL MENÚ EN MÓVILES --- */
+/* AJUSTE FINAL PARA QUE QUEPA CONTACTO */
 @media (max-width: 768px) {
     .nav-links {
-        display: flex;
-        justify-content: center;
-        gap: 10px; /* Reduce el espacio para que quepan todos */
-        padding: 0;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        padding: 0 !important;
     }
 
     .nav-links a {
-        font-size: 11px; /* Letra más pequeña para el móvil */
-        padding: 5px;
+        font-size: 10px !important; 
+        padding: 5px 2px !important;
+        letter-spacing: -0.5px;
     }
 }
 
