@@ -358,3 +358,16 @@ h1, h2 { color: var(--azul-oscuro); margin-bottom: 20px; }
         height: 250px;
     }
 }
+/* Esto ajusta todas las imágenes al ancho de la pantalla */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Esto asegura que los contenedores no se desborden */
+.seccion-contenedor {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
