@@ -115,21 +115,6 @@ header {
     }
 }
 
-/* AJUSTE FINAL PARA QUE QUEPA CONTACTO */
-@media (max-width: 768px) {
-    .nav-links {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 5px !important;
-        padding: 0 !important;
-    }
-
-    .nav-links a {
-        font-size: 10px !important; 
-        padding: 5px 2px !important;
-        letter-spacing: -0.5px;
-    }
-}
 
 .nav-links a.active {
     color: #ff4d4d;
