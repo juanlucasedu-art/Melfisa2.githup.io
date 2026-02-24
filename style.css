@@ -106,6 +106,32 @@ header {
         letter-spacing: -0.5px;
     }
 }
+/* AJUSTE PARA TODAS LAS PÁGINAS INTERNAS EN MÓVIL */
+@media (max-width: 768px) {
+    /* Esto baja el contenido para que el menú azul no lo tape */
+    .seccion-contenedor {
+        padding-top: 100px !important; 
+        padding-bottom: 50px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Esto ajusta la foto de los alumnos para que no se vea gigante */
+    .seccion-contenedor img {
+        width: 90% !important;
+        max-width: 400px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Arregla el fondo para que no se vea cortado */
+    body {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+    }
+}
 
 .nav-links a.active {
     color: #ff4d4d;
