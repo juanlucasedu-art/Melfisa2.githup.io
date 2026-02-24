@@ -10,9 +10,6 @@
 
 body {
   /* Estilo del Fondo de Página */
-body {
-    /* Estilo del Fondo de Página */
-body {
     background-image: url('img/FONDO.jpg'); /* Asegúrate de que el nombre sea exacto */
     background-repeat: no-repeat;
     background-size: cover !important;
